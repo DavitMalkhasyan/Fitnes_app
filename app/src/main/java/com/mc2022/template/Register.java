@@ -108,13 +108,11 @@ public class Register extends AppCompatActivity {
                     return;
                 }
 
-                //user registration in firebase
                 fauth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            //verify email
                             FirebaseUser newuser=fauth.getCurrentUser();
                             newuser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override

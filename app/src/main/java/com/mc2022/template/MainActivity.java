@@ -39,20 +39,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frame1,option);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
-
-        /*b1=(Button) findViewById(R.id.physical_fitness);//defining button for 'start service' button functionality
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frameLayout,p1);
-                fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
-            }
-        });*/
     }
 
     android.widget.Toast Toast;

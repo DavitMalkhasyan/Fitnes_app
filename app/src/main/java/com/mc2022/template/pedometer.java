@@ -64,7 +64,6 @@ public class pedometer extends AppCompatActivity implements SensorEventListener 
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
         if(running){
-            //progressBar.setProgressMax(25000);
             totalSteps=sensorEvent.values[0];
             int a= (int) totalSteps,b=(int) previousTotalSteps,currentsteps;
             currentsteps=a-b;
@@ -74,7 +73,6 @@ public class pedometer extends AppCompatActivity implements SensorEventListener 
             steps_taken.setText(s);
             progressBar.setProgress(Float.parseFloat(s));
             float c=(float) currentsteps;
-            //progressBar.setProgressWithAnimation(c, 1000L);
             Log.d("msg","first 4");
         }
     }

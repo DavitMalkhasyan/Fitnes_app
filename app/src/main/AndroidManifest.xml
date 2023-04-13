@@ -19,7 +19,6 @@
             android:name=".pedometer"
             android:exported="false" />
 
-        //here .userprofile
         <activity
             android:name=".userprofile"
             android:exported="false" />
@@ -30,7 +29,7 @@
             android:name=".Register"
             android:exported="false" />
 
-        //here .Login
+
         <activity
             android:name=".Login"
             android:exported="true">

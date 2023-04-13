@@ -55,13 +55,9 @@ public class userprofile extends AppCompatActivity {
         ig=findViewById(R.id.logoappuserprofile);
         sendcode=findViewById(R.id.sendcode);
         emailmessage=findViewById(R.id.verifymessage);
-
         fauth = FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
         userID=fauth.getCurrentUser().getUid();
-        //////////////////////////////////////////////////////////
-        //showing data on screen
-
         DocumentReference documentReference= fstore.collection("users").document(userID);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
@@ -79,7 +75,6 @@ public class userprofile extends AppCompatActivity {
             }
         });
 
-        //////////////////////////////////////////////////////////
         FirebaseUser user= fauth.getCurrentUser();
         if(!user.isEmailVerified()){
             sendcode.setVisibility(View.VISIBLE);
@@ -109,7 +104,6 @@ public class userprofile extends AppCompatActivity {
             });
         }
         fr=findViewById(R.id.frameLayout);
-        //defining button for 'submit' button functionality
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -128,11 +122,8 @@ public class userprofile extends AppCompatActivity {
                 userheight.setVisibility(view.GONE);
                 userweight.setVisibility(view.GONE);
                 ig.setVisibility(view.GONE);
-                //fr.setVisibility(view.INVISIBLE);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
-                //Intent intent = new Intent(userprofile.this, MainActivity.class);
-                //startActivity(intent);
             }
         });
 

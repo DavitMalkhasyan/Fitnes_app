@@ -1,5 +1,6 @@
 package com.mc2022.template;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -13,37 +14,21 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link monthly_plan#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class monthly_plan extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
     day1 d1=new day1();
     Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b22,b23,b24,b25,b26,b27,b28,b29,b30;
     TextView t1,t2,t3,t5,t6,t7,t9,t10,t11,t13,t14,t15,t17,t18,t19,t21,t22,t23,t25,t26,t27,t29,t30;
     public monthly_plan() {
-        // Required empty public constructor
+
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment monthly_plan.
-     */
-    // TODO: Rename and change types and number of parameters
     public static monthly_plan newInstance(String param1, String param2) {
         monthly_plan fragment = new monthly_plan();
         Bundle args = new Bundle();
@@ -64,6 +49,7 @@ public class monthly_plan extends Fragment {
 
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -88,7 +74,7 @@ public class monthly_plan extends Fragment {
         b28.setTextColor(Color.RED);
 
 
-        b1=(Button) view.findViewById(R.id.day1);//defining button for 'start service' button functionality
+        b1=(Button) view.findViewById(R.id.day1);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -100,31 +86,25 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
             }
         });
 
-        b2=(Button) view.findViewById(R.id.day2);//defining button for 'start service' button functionality
+        b2=(Button) view.findViewById(R.id.day2);
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity.count=3;
-                MainActivity.text="YOUR DAY-2";
+                MainActivity.count = 3;
+                MainActivity.text = "YOUR DAY-2";
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                if(!d1.isAdded())
+                if (!d1.isAdded())
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
             }
         });
 
-        b3=(Button) view.findViewById(R.id.day3);//defining button for 'start service' button functionality
+        b3=(Button) view.findViewById(R.id.day3);
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -136,31 +116,11 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
             }
         });
 
 
-        /*b4=(Button) view.findViewById(R.id.day4);//defining button for 'start service' button functionality
-        b4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MainActivity.count=9;
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                if(!d1.isAdded())
-                    fragmentTransaction.add(R.id.frameLayout, d1);
-                fragmentTransaction.addToBackStack(String.valueOf(d1));
-                fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
-            }
-        });*/
-
-        b5=(Button) view.findViewById(R.id.day5);//defining button for 'start service' button functionality
+        b5=(Button) view.findViewById(R.id.day5);
         b5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -172,13 +132,10 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
             }
         });
 
-        b6=(Button) view.findViewById(R.id.day6);//defining button for 'start service' button functionality
+        b6=(Button) view.findViewById(R.id.day6);
         b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -190,13 +147,10 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
             }
         });
 
-        b7=(Button) view.findViewById(R.id.day7);//defining button for 'start service' button functionality
+        b7=(Button) view.findViewById(R.id.day7);
         b7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -208,31 +162,12 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
+
             }
         });
 
-        /*b8=(Button) view.findViewById(R.id.day8);//defining button for 'start service' button functionality
-        b8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MainActivity.count=21;
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                if(!d1.isAdded())
-                    fragmentTransaction.add(R.id.frameLayout, d1);
-                fragmentTransaction.addToBackStack(String.valueOf(d1));
-                fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
-            }
-        });*/
 
-
-        b9=(Button) view.findViewById(R.id.day9);//defining button for 'start service' button functionality
+        b9=(Button) view.findViewById(R.id.day9);
         b9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -244,13 +179,10 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
             }
         });
 
-        b10=(Button) view.findViewById(R.id.day10);//defining button for 'start service' button functionality
+        b10=(Button) view.findViewById(R.id.day10);
         b10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -262,13 +194,10 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
             }
         });
 
-        b11=(Button) view.findViewById(R.id.day11);//defining button for 'start service' button functionality
+        b11=(Button) view.findViewById(R.id.day11);
         b11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -280,30 +209,10 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
             }
         });
 
-        /*b12=(Button) view.findViewById(R.id.day12);//defining button for 'start service' button functionality
-        b12.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MainActivity.count=33;
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                if(!d1.isAdded())
-                    fragmentTransaction.add(R.id.frameLayout, d1);
-                fragmentTransaction.addToBackStack(String.valueOf(d1));
-                fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
-            }
-        });*/
-
-        b13=(Button) view.findViewById(R.id.day13);//defining button for 'start service' button functionality
+        b13=(Button) view.findViewById(R.id.day13);
         b13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -315,32 +224,26 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
             }
         });
 
 
-        b14=(Button) view.findViewById(R.id.day14);//defining button for 'start service' button functionality
+        b14=(Button) view.findViewById(R.id.day14);
         b14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity.count=30;
-                MainActivity.text="YOUR DAY-14";
+                MainActivity.count = 30;
+                MainActivity.text = "YOUR DAY-14";
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                if(!d1.isAdded())
+                if (!d1.isAdded())
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
             }
         });
 
-        b15=(Button) view.findViewById(R.id.day15);//defining button for 'start service' button functionality
+        b15=(Button) view.findViewById(R.id.day15);
         b15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -352,29 +255,12 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
+
             }
         });
 
-        /*b16=(Button) view.findViewById(R.id.day16);//defining button for 'start service' button functionality
-        b16.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MainActivity.count=45;
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frameLayout, d1);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
-            }
-        });*/
 
-        b17=(Button) view.findViewById(R.id.day17);//defining button for 'start service' button functionality
+        b17=(Button) view.findViewById(R.id.day17);
         b17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -386,13 +272,10 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
-            }
+               }
         });
 
-        b18=(Button) view.findViewById(R.id.day18);//defining button for 'start service' button functionality
+        b18=(Button) view.findViewById(R.id.day18);
         b18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -404,14 +287,11 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
-            }
+               }
         });
 
 
-        b19=(Button) view.findViewById(R.id.day19);//defining button for 'start service' button functionality
+        b19=(Button) view.findViewById(R.id.day19);
         b19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -423,30 +303,11 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
+
             }
         });
 
-        /*b20=(Button) view.findViewById(R.id.day20);//defining button for 'start service' button functionality
-        b20.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MainActivity.count=57;
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                if(!d1.isAdded())
-                    fragmentTransaction.add(R.id.frameLayout, d1);
-                fragmentTransaction.addToBackStack(String.valueOf(d1));
-                fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
-            }
-        });*/
-
-        b21=(Button) view.findViewById(R.id.day21);//defining button for 'start service' button functionality
+        b21=(Button) view.findViewById(R.id.day21);
         b21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -458,13 +319,10 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
-            }
+                }
         });
 
-        b22=(Button) view.findViewById(R.id.day22);//defining button for 'start service' button functionality
+        b22=(Button) view.findViewById(R.id.day22);
         b22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -476,13 +334,10 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
-            }
+                }
         });
 
-        b23=(Button) view.findViewById(R.id.day23);//defining button for 'start service' button functionality
+        b23=(Button) view.findViewById(R.id.day23);
         b23.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -494,29 +349,11 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
-            }
+                }
         });
 
 
-        /*b24=(Button) view.findViewById(R.id.day24);//defining button for 'start service' button functionality
-        b24.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MainActivity.count=69;
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                if(!d1.isAdded())
-                    fragmentTransaction.add(R.id.frameLayout, d1);
-                fragmentTransaction.addToBackStack(String.valueOf(d1));
-                fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
-            }
-        });*/
+
 
         b25=(Button) view.findViewById(R.id.day25);//defining button for 'start service' button functionality
         b25.setOnClickListener(new View.OnClickListener() {
@@ -536,7 +373,7 @@ public class monthly_plan extends Fragment {
             }
         });
 
-        b26=(Button) view.findViewById(R.id.day26);//defining button for 'start service' button functionality
+        b26=(Button) view.findViewById(R.id.day26);
         b26.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -549,46 +386,23 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
-            }
+                }
         });
 
-        b27=(Button) view.findViewById(R.id.day27);//defining button for 'start service' button functionality
+        b27=(Button) view.findViewById(R.id.day27);
         b27.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity.count=60;
-                MainActivity.text="YOUR DAY-27";
+                MainActivity.count = 60;
+                MainActivity.text = "YOUR DAY-27";
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                if(!d1.isAdded())
+                if (!d1.isAdded())
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
             }
         });
-
-        /*b28=(Button) view.findViewById(R.id.day28);//defining button for 'start service' button functionality
-        b28.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MainActivity.count=81;
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                if(!d1.isAdded())
-                    fragmentTransaction.add(R.id.frameLayout, d1);
-                fragmentTransaction.addToBackStack(String.valueOf(d1));
-                fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
-            }
-        });*/
 
 
         b29=(Button) view.findViewById(R.id.day29);//defining button for 'start service' button functionality
@@ -609,7 +423,7 @@ public class monthly_plan extends Fragment {
             }
         });
 
-        b30=(Button) view.findViewById(R.id.day30);//defining button for 'start service' button functionality
+        b30=(Button) view.findViewById(R.id.day30);
         b30.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -621,9 +435,7 @@ public class monthly_plan extends Fragment {
                     fragmentTransaction.add(R.id.frameLayout, d1);
                 fragmentTransaction.addToBackStack(String.valueOf(d1));
                 fragmentTransaction.commit();
-                //Intent intent=new Intent(MainActivity.this,Service_1.class);
-                //intent.putStringArrayListExtra("newlist",list);
-                //startService(intent);
+
             }
         });
 

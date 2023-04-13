@@ -61,7 +61,6 @@ public class Login extends AppCompatActivity {
                     return;
                 }
 
-                //authentication
 
                 fauth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
